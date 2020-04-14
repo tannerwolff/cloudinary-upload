@@ -9,7 +9,7 @@ export default class PhotoReturn extends Component {
         }
     }
     componentDidMount(){
-        axios.get(`https://res.cloudinary.com/${process.env.CLOUD_NAME}/image/list/cloud-upload.json`)
+        axios.get(`http://res.cloudinary.com/${process.env.CLOUD_NAME}/image/list/cloud-upload.json`)
         .then(res => {
             this.setState({
               gallery: res.data.resources
